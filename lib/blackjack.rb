@@ -54,6 +54,7 @@ end
 
 def runner
   welcome
+  sleep 0.75
   initial_round = card_total
 
   until card_total > 21
