@@ -55,11 +55,11 @@ end
 def runner
   welcome
   sleep 0.75
-  initial_round = card_total
+  card_total = initial_round #deal cards and tell user total of cards
 
   until card_total > 21
-    hit?
-    display_card_total
-
-  end_game
+    card_total = hit?(card_total)
+    display_card_total(card_total)
+  end
+  end_game(card_total)
 end
